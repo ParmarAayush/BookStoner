@@ -1,0 +1,236 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(42, 116, 42);
+    background: linear-gradient(90deg, rgba(42, 116, 42, 1) -46%, rgba(10, 232, 150, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    background-repeat: no-repeat;
+    font: display;
+
+}
+
+.header {
+
+    width: body;
+    height: 200px;
+    margin-bottom: 10px;
+    background-image: url("https://s2982.pcdn.co/wp-content/uploads/2018/03/book-covers-of-april-2018.jpg.webp");
+
+
+}
+
+#menu {
+    font-weight: 1000;
+    font-family: 'Rubik', sans-serif;
+    margin-top: 0px;
+
+
+}
+
+.header #logo {
+    padding-bottom: 0px;
+    padding-top: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 400;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 0.3em;
+}
+
+.header #logo p {
+    font-size: 65px;
+    color: #E6394D;
+    font-weight: 700;
+    -webkit-text-stroke: 3px white;
+
+}
+
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #00203FFF;
+
+
+}
+
+#menu li {
+    float: left;
+    margin: 5px;
+
+}
+
+#menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px 15px;
+    text-decoration: none;
+    border-radius: 3px;
+
+}
+
+#menu li a:hover:not(.active) {
+    background-color: #ADEFD1FF;
+    /*border:1px solid black;*/
+    border-radius: 3px;
+    color: black;
+}
+
+#menu #search {
+    float: right;
+    margin-top: -55px;
+    margin-right: 20px;
+
+}
+
+#menu #search input[type=text] {
+
+    padding: 13px 13px;
+    font-size: 17px;
+    border: none;
+    border-radius: 3px;
+}
+
+#menu #search button {
+    float: right;
+    padding: 13px 13px;
+    margin-left: 10px;
+    font-size: 17px;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.main-div {
+    /* height: 100cm;       
+        padding: 0vw; */
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.main-div #book-main {
+    border: 2px solid rgb(222, 235, 231);
+    float: left;
+    height: 650px;
+    /*content change*/
+    width: 300px;
+    margin: 10px;
+    padding: 15px;
+
+}
+
+.main-div #book-main:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+    z-index: -1;
+    opacity: 20;
+    border-radius: 5px;
+
+
+}
+
+.main-div #book-main #booka #btn {
+    height: 40px;
+    width: 150px;
+    background-color: #ff5c1c;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+
+}
+
+.main-div #book-main #booka #btn a {
+    text-decoration: none;
+    font-weight: 800;
+    color: white;
+    letter-spacing: .2em;
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+    display: block;
+}
+
+.main-div #book-main #booka h2 {
+    text-align: center;
+    padding: 2px;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    letter-spacing: 0.1em;
+    word-spacing: 0.01rem;
+
+}
+
+.main-div #book-main #booka img {
+    width: 300px;
+    height: 454.8px;
+    object-fit: cover;
+
+}
+
+.footer {
+    background-color: #111;
+    height: auto;
+    width: 100%;
+    /* bottom: 0;
+        left: 0;
+        right: 0; */
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+
+
+
+}
+
+.footer h1 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+    /*border-radius: ;*/
+
+}
+
+.footer .copyright {
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+    line-height: 1.5rem;
+
+}
+
+.footer.copyright p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+
+}
+
+.footer .copyright span {
+    text-transform: uppercase;
+    opacity: 4;
+    font-weight: 200;
+
+}
+
+@media(max-width:750px) {
+    .footer {
+        background-color: #111;
+        width: 60%;
+    }
+}
+
+@media(max-width:414px) {
+    .footer {
+        background-color: #111;
+        /*position:*/
+        ;
+        width: 100%;
+    }
+
+}
