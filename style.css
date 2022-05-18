@@ -14,7 +14,7 @@ body {
 .header {
 
     width: 100%;
-    height: 400px;
+    height: 350px;
     margin-bottom: 10px;
     background-image: url("https://s2982.pcdn.co/wp-content/uploads/2018/03/book-covers-of-april-2018.jpg.webp");
 
@@ -72,10 +72,11 @@ body {
 }
 
 .main-div {
-   display: flex;
-   flex-wrap: wrap;
+    margin: 130px auto 10px auto;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-    
+
 }
 
 .main-div #book-main {
@@ -99,6 +100,7 @@ body {
     transition: all 2s;
 
 }
+
 .main-div #book-main #booka #btn:hover {
     background-color: transparent;
     border: 2px solid #ff5c1c;
