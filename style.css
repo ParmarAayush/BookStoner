@@ -72,7 +72,7 @@ body {
 }
 
 .main-div {
-    margin: 130px auto 10px auto;
+    margin: 130px 175px 10px 175px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
