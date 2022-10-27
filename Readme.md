@@ -1,4 +1,4 @@
-# Book Stoner - Complite Website 
+# Book Stoner - Complete Website 
 
 ## Table Of Contents
 
