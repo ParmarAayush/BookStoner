@@ -14,7 +14,7 @@ body {
 header {
   width: 100%;
   height: 200px;
-  background-image: url("/sass/images/Book_Background.jpg");
+  background-image: url("./sass/images/Book_Background.jpg");
   background-size: 50%;
 }
 header p {
