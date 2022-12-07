@@ -1,0 +1,68 @@
+@import "variable";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font;
+}
+
+@import "header";
+
+main {
+    background-color: $secondary;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    grid-template-rows: 770px 770px 770px;
+    justify-content: center;
+    .book {
+        margin: 10px;
+        height: 750px;
+        width: 340px;
+        border: 2px solid white;
+        padding: 5px;
+        background-color: transparent;
+
+        img{
+            height: 500px;
+            width: 320px;
+        }
+        p{
+            font-size: 25px;
+            text-align: center;
+            font-weight: bolder;    
+            margin-top: 24px;
+            color: $font-color;
+            letter-spacing: 1px;
+        }
+        .buttons
+        {
+            display: flex;
+            flex-direction: row;
+
+            input[type=submit]{
+                height: 35px;
+                width: 150px;
+                margin:5px;
+                outline: none;
+                border: none;
+                font-size: medium;
+                font-weight: 600;
+                letter-spacing: 1px;
+                text-align: center;
+                border-radius: 4px;
+                color: white;
+                background-color: $tertiary;
+            }
+            input[type=submit]:hover
+            {
+                background-color: $primary;
+            }
+        }
+    }
+}
+
+@import "footer";
