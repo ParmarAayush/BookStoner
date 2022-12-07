@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -22,18 +24,99 @@ header p {
   padding-top: 50px;
 }
 
+nav {
+  height: 45px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #393E46;
+}
 nav ul {
   list-style: none;
   list-style-type: none;
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  align-items: center;
+  gap: 5px;
 }
 nav li {
-  height: 100px;
-  width: 70px;
+  height: 40px;
+  width: 90px;
+  background-color: #393E46;
+  border-radius: 4px;
+}
+nav li:hover {
+  background-color: #222831;
 }
 nav a {
+  font-weight: 600;
+  letter-spacing: 1px;
   text-decoration: none;
   display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 12%;
+}
+
+main {
+  background-color: #393E46;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 350px 350px 350px;
+  grid-template-rows: 770px 770px 770px;
+  justify-content: center;
+}
+main .book {
+  margin: 10px;
+  height: 750px;
+  width: 340px;
+  border: 2px solid white;
+  padding: 5px;
+  background-color: transparent;
+}
+main .book img {
+  height: 500px;
+  width: 320px;
+}
+main .book p {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bolder;
+  margin-top: 24px;
+  color: #EEEEEE;
+  letter-spacing: 1px;
+}
+main .book .buttons {
+  display: flex;
+  flex-direction: row;
+}
+main .book .buttons input[type=submit] {
+  height: 35px;
+  width: 150px;
+  margin: 5px;
+  outline: none;
+  border: none;
+  font-size: medium;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-align: center;
+  border-radius: 4px;
+  color: white;
+  background-color: #00ADB5;
+}
+main .book .buttons input[type=submit]:hover {
+  background-color: #222831;
+}
+
+footer {
+  width: 100%;
+  background-color: #222831;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .developer {
+  color: #EEEEEE;
 }/*# sourceMappingURL=style.css.map */
