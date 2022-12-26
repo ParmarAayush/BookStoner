@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="./sass/upload.css">
+    <!-- link End -->
+    <title>Upload:Book Stoner</title>
+</head>
+<body>
+    <header>
+        <p class="brand">Book Stoner</p>
+    </header>
+    <nav>
+        <ul>
+            <li> <a href="index.html"><i class="fa-solid fa-house icon"></i></a></li>
+            <li> <a href="upload.html"><i class="fa-solid fa-cloud-arrow-up icon"></i></a></li>
+            <li> <a href="#request"><i class="fa-solid fa-up-right-from-square icon"></i></a></li>
+            <li> <a href="#login"><i class="fa-solid fa-user icon"></i></a>
+                <ul>
+                    <li><a href="#logout"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <div class="upload-box">
+            <img src="./sass/images/2125020.jpg" alt="" class="left">
+            <form action="">
+                <input type="text" name="title" id="title" placeholder="Enter Book Title" required>
+                <input type="text" name="author" id="author" placeholder="Author Name" required>
+                <input type="text" name="price" id="price" placeholder="Price" >
+                <input type="text" name="isbn" id="isbn" placeholder="ISBN Number" required>
+                <div class="file">
+                    <label for="coverpage">
+                        <i class="fa fa-2x fa-camera"></i>
+                        <input type="file" name="coverpage" id="coverpage" required>
+                    </label>
+                </div>
+                <input type="submit" value="Upload" id="upload">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p class="developer">
+            copyright <span>&#169;</span> 2022 bookstor.
+            designed by PARMAR AAYUSH
+        </p>
+    </footer>
+</body>
+</html>
