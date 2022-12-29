@@ -1,8 +1,12 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics.js";
+import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+import { } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js";
+import { } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyDK1Oh9-Yfl2BrJ59PsECDL0Q_ywn9jHU0",
   authDomain: "bookstoner-79bcd.firebaseapp.com",
   projectId: "bookstoner-79bcd",
@@ -12,5 +16,6 @@ const firebaseConfig = {
   measurementId: "G-V1C94EX8HD"
 };
 
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+export const app = initializeApp(firebaseConfig);
+export const analytics = getAnalytics(app);
+export const auth = getAuth();
