@@ -6,9 +6,13 @@
 }
 
 body {
+    height: cal(100vh - 0.420vh);
     font-family: $font;
     overflow-x: hidden;
     background-color: $secondary;
+    display: flex;
+    flex-direction: column;
+    
 }
 
 header {
