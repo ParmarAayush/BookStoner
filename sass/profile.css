@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  background-color: #393E46;
+}
+
+header {
+  width: 100%;
+  height: 200px;
+  background-image: url("https://your-space-assets.s3.ap-south-1.amazonaws.com/wp-content/uploads/2022/04/22072943/libraries-in-mumbai-2048x934.jpg");
+  background-size: 50%;
+}
+header p {
+  font-size: 80px;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 50px;
+}
+
+nav {
+  height: 45px;
+  width: 100%;
+  background-color: #393E46;
+}
+nav ul {
+  list-style: none;
+  list-style-type: none;
+}
+nav ul li {
+  float: left;
+  height: 40px;
+  width: 70px;
+  background-color: #393E46;
+}
+nav ul li a {
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-decoration: none;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 12%;
+  transition: all 1s ease-in-out;
+}
+nav ul li a:hover {
+  border-radius: 4px;
+  background-color: #222831;
+  color: #00ADB5;
+}
+nav ul li ul {
+  visibility: hidden;
+}
+nav ul li:hover ul {
+  visibility: visible;
+}
+nav ul li:last-child {
+  float: right;
+}
+
+.displaynone {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+section img {
+  margin: 10% auto 6% auto;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+section input[type=email],
+section input[type=text],
+section input[type=tel],
+section input[type=password] {
+  height: 35px;
+  width: 80%;
+  margin: 20px 5px;
+  outline: none;
+  border: none;
+  font-size: medium;
+  font-weight: 600;
+  border: none;
+  border-bottom: 2px solid;
+  background-color: transparent;
+  color: #EEEEEE;
+}
+section input[type=button] {
+  height: 35px;
+  width: 150px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  font-size: medium;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-radius: 4px;
+  color: #EEEEEE;
+  background-color: #00ADB5;
+  transition: background-color 1s ease-in-out;
+  margin-top: 30px;
+}
+section input[type=button]:hover {
+  background-color: #222831;
+  border: 2px solid #00ADB5;
+}
+section .register {
+  height: 560px;
+  width: 400px;
+  background-color: #222831;
+  border-radius: 7px;
+}
+section .register .gender {
+  display: inline-block;
+  margin-right: 20%;
+}
+section .register .gender .container {
+  margin: 10px;
+  position: relative;
+  color: white;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+section .register .gender .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+section .register .gender .container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+section .register .gender .container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+section .register .gender .container .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+section .register .gender .container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+section .register .gender .container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+section .register .gender .container input:checked ~ .checkmark:after {
+  display: block;
+}
+section .signIn {
+  height: 400px;
+  width: 400px;
+  background-color: #222831;
+  border-radius: 7px;
+  text-align: center;
+}/*# sourceMappingURL=profile.css.map */
