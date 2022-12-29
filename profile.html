@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- link start -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="./sass/profile.css">
+    <!-- link End -->
+    <title>Profile:Book Stoner</title>
+</head>
+
+<body>
+    <header>
+        <p class="brand">Book Stoner</p>
+    </header>
+    <nav>
+        <ul>
+            <li> <a href="index.html"><i class="fa-solid fa-house icon"></i></a></li>
+            <li> <a href="upload.html"><i class="fa-solid fa-cloud-arrow-up icon"></i></a></li>
+            <li> <a href="#request"><i class="fa-solid fa-up-right-from-square icon"></i></a></li>
+            <li id="profileActive"> <a href="profile.html"><i class="fa-solid fa-user icon"></i></a>
+                <ul>
+                    <li><a href="#logout" id="logOut"><i class="fa-solid fa-right-from-bracket"></i></a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <section>
+        <div class="register">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                alt="Profile Image">
+            <form id="regform">
+                <input type="text" name="name" id="name" placeholder="Name" required>
+                <input type="tel" name="telNumber" id="telNumber" placeholder="Mobile Number">
+                <div class="gender">
+                    <label class="container">Male
+                        <input type="radio" checked="checked" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                    <label class="container">Female
+                        <input type="radio" name="radio">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+                <input type="email" name="email" id="regEmail" required placeholder="someone@gmail.com">
+                <input type="password" name="password" id="regPassword" placeholder="Create Password" required>
+                <input type="button" value="Register" id="registerBtn">
+                <!-- <a href="">Already Have An Account ? </a> -->
+            </form>
+        </div>
+
+        <div class="signIn">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                alt="Profile Image">
+            <form id="signInform">
+                <input type="email" name="email" id="sinInemail" placeholder="someone@gmail.com" required>
+                <input type="password" name="sigInpassword" id="sigInpassword" placeholder="Password" required>
+                <input type="button" value="Sign In" id="signinBtn" required>
+                <!-- <a href="#">Register New User Account ?</a> -->
+            </form>
+        </div>
+    </section>
+    <script src="/BookStoner/javaScript/profile.js"></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="tempOne">
+    <div class="profile">
+        <div class="profileData">
+            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                alt="Profile Image">
+        </div>
+        <div class="activityData">
+            <div class="bookRequest">
+                <p>a</p>
+            </div>
+            <div class="bookUpload">
+                <p>a</p>
+            </div>
+        </div>
+    </div>
+</div> -->
