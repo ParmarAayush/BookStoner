@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +8,12 @@
 }
 
 body {
+  height: cal(99.58vh);
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
   background-color: #393E46;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -119,6 +123,7 @@ section input[type=button]:hover {
 }
 section .register {
   margin-top: 10px;
+  padding-bottom: 10px;
   height: 600px;
   width: 400px;
   background-color: #222831;
@@ -224,4 +229,17 @@ section .tempOne .profile .activityData > div p {
   font-weight: 600;
   color: silver;
   margin-top: 20px;
+}
+
+footer {
+  width: 100%;
+  margin-top: auto;
+  background-color: #222831;
+  line-height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer .developer {
+  color: #EEEEEE;
 }/*# sourceMappingURL=profile.css.map */

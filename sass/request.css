@@ -70,44 +70,31 @@ nav ul li:last-child {
 }
 
 main {
-  overflow: hidden;
-  min-height: calc(100vh - 245px - 150px);
   background-color: #393E46;
-  padding: 0px 200px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  overflow: hidden;
 }
-main .book {
-  margin: 10px;
-  height: 750px;
-  width: 340px;
-  border: 2px solid white;
-  padding: 5px;
-  background-color: transparent;
-  display: grid;
-  grid-template-columns: 50%;
-  grid-template-rows: 69% 20% 20%;
-  transition: background-color 2s ease-in-out;
-}
-main .book:hover {
+main .upload-box {
   background-color: #222831;
+  height: 450px;
+  width: 66%;
+  margin: 4% auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-main .book img {
-  height: 500px;
-  width: 320px;
-  grid-column: 1/3;
+main .upload-box .left {
+  border-top-right-radius: 5%;
+  border-bottom-right-radius: 5%;
 }
-main .book p {
-  font-size: 25px;
-  text-align: center;
-  font-weight: bolder;
-  color: #EEEEEE;
-  letter-spacing: 1px;
-  grid-column: 1/3;
+main .upload-box form {
+  width: 40%;
+  margin-right: 6%;
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 10% 10% 45% 20%;
 }
-main .book input[type=submit] {
-  margin: 0px 5px;
+main .upload-box input[type=submit] {
   height: 35px;
   width: 150px;
   outline: none;
@@ -120,10 +107,45 @@ main .book input[type=submit] {
   color: #EEEEEE;
   background-color: #00ADB5;
   transition: background-color 1s ease-in-out;
+  grid-row-start: 5;
+  margin-left: 60%;
 }
-main .book input[type=submit]:hover {
+main .upload-box input[type=submit]:hover {
   background-color: #222831;
   border: 2px solid #00ADB5;
+}
+main .upload-box input[type=text] {
+  height: 35px;
+  width: 90%;
+  margin: 0px 5px;
+  outline: none;
+  border: none;
+  font-size: medium;
+  font-weight: 600;
+  border: none;
+  border-bottom: 2px solid;
+  background-color: transparent;
+  color: #EEEEEE;
+}
+main .upload-box .file {
+  height: 200px;
+  text-align: center;
+  padding: 20% 40%;
+  border: 5px dashed #393E46;
+  margin: 38px 10px;
+  background-color: #d4d2d5;
+  opacity: 0.5;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+main .upload-box .file label {
+  cursor: pointer;
+}
+main .upload-box .file input[type=file] {
+  display: none;
+}
+main .upload-box .file i {
+  color: #EEEEEE;
 }
 
 footer {
@@ -137,4 +159,4 @@ footer {
 }
 footer .developer {
   color: #EEEEEE;
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=request.css.map */
