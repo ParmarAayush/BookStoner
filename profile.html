@@ -30,9 +30,9 @@
     </nav>
     <section>
         <div class="register">
-            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                alt="Profile Image">
             <form id="regform">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                    alt="Profile Image">
                 <input type="text" name="name" id="name" placeholder="Name" required>
                 <input type="tel" name="telNumber" id="telNumber" placeholder="Mobile Number">
                 <div class="gender">
@@ -47,20 +47,43 @@
                 </div>
                 <input type="email" name="email" id="regEmail" required placeholder="someone@gmail.com">
                 <input type="password" name="password" id="regPassword" placeholder="Create Password" required>
-                <input type="button" value="Register" id="registerBtn">
-                <!-- <a href="">Already Have An Account ? </a> -->
+                <input type="button" value="Register" id="registerBtn"> <br>
+                <a href="#signInform" id="signinLink">Already Have An Account ? </a> 
             </form>
         </div>
 
-        <div class="signIn">
-            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                alt="Profile Image">
+        <div class="signIn displaynone">
             <form id="signInform">
+                <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                    alt="Profile Image">
                 <input type="email" name="email" id="sinInemail" placeholder="someone@gmail.com" required>
                 <input type="password" name="sigInpassword" id="sigInpassword" placeholder="Password" required>
-                <input type="button" value="Sign In" id="signinBtn" required>
-                <!-- <a href="#">Register New User Account ?</a> -->
+                <input type="button" value="Sign In" id="signinBtn" required> <br>
+                <a href="#regform" id="regLink">Register New User Account ?</a>
             </form>
+        </div>
+
+        <div class="tempOne">
+            <div class="profile">
+                <div class="profileData">
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                        alt="Profile Image">
+                    <p id="Name"></p>
+                    <p id="eamil"></p>
+                    <p id="phoneNo"></p>
+                    
+                </div>
+                <div class="activityData">
+                    <div class="bookRequest">
+                        <h2>Total Book <br> Request</h2>
+                        <p>20</p>
+                    </div>
+                    <div class="bookUpload">
+                        <h2>Total Book <br> Upload</h2>
+                        <p>20</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <script src="/BookStoner/javaScript/profile.js"></script>
@@ -80,19 +103,3 @@
 
 
 
-<!-- <div class="tempOne">
-    <div class="profile">
-        <div class="profileData">
-            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                alt="Profile Image">
-        </div>
-        <div class="activityData">
-            <div class="bookRequest">
-                <p>a</p>
-            </div>
-            <div class="bookUpload">
-                <p>a</p>
-            </div>
-        </div>
-    </div>
-</div> -->

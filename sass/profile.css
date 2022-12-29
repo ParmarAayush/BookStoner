@@ -67,12 +67,11 @@ nav ul li:last-child {
 
 .displaynone {
   display: none;
-  visibility: hidden;
-  opacity: 0;
 }
 
 section {
   display: flex;
+  height: 600px;
   justify-content: center;
   text-align: center;
 }
@@ -112,13 +111,15 @@ section input[type=button] {
   background-color: #00ADB5;
   transition: background-color 1s ease-in-out;
   margin-top: 30px;
+  margin-bottom: 20px;
 }
 section input[type=button]:hover {
   background-color: #222831;
   border: 2px solid #00ADB5;
 }
 section .register {
-  height: 560px;
+  margin-top: 10px;
+  height: 600px;
   width: 400px;
   background-color: #222831;
   border-radius: 7px;
@@ -176,9 +177,51 @@ section .register .gender .container input:checked ~ .checkmark:after {
   display: block;
 }
 section .signIn {
-  height: 400px;
+  margin-top: 10px;
+  height: 450px;
   width: 400px;
   background-color: #222831;
   border-radius: 7px;
   text-align: center;
+}
+section .tempOne {
+  height: 600px;
+  margin-top: 10px;
+  border-radius: 7px;
+}
+section .tempOne .profile {
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+}
+section .tempOne .profile .profileData {
+  width: 400px;
+  height: 590px;
+  background-color: #222831;
+  border-radius: 7px;
+  border-right: 5px dashed #393E46;
+}
+section .tempOne .profile .activityData {
+  width: 90%;
+  background-color: #222831;
+  border-radius: 7px;
+}
+section .tempOne .profile .activityData > div {
+  display: inline-block;
+  margin: 20px;
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  background-color: #393E46;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+section .tempOne .profile .activityData > div h2 {
+  margin-top: 20px;
+  color: white;
+}
+section .tempOne .profile .activityData > div p {
+  font-size: 50px;
+  font-weight: 600;
+  color: silver;
+  margin-top: 20px;
 }/*# sourceMappingURL=profile.css.map */
