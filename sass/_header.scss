@@ -1,4 +1,5 @@
 @import "variable";
+
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +7,10 @@
 }
 
 body {
-    height: cal(100vh - 0.420vh);
     font-family: $font;
     overflow-x: hidden;
     background-color: $secondary;
-    display: flex;
-    flex-direction: column;
-    
+
 }
 
 header {
@@ -20,6 +18,7 @@ header {
     height: 200px;
     background-image: url('https://your-space-assets.s3.ap-south-1.amazonaws.com/wp-content/uploads/2022/04/22072943/libraries-in-mumbai-2048x934.jpg');
     background-size: 50%;
+
     p {
         font-size: 80px;
         text-align: center;
@@ -28,20 +27,27 @@ header {
     }
 
 }
+
 nav {
     height: 45px;
     width: 100%;
     background-color: $secondary;
-    
+
+    .active {
+        background-color: $primary;
+        color: $tertiary;
+    }
+
     ul {
         list-style: none;
         list-style-type: none;
+
         li {
             float: left;
             height: 40px;
             width: 70px;
             background-color: $secondary;
-            
+
 
             a {
                 font-weight: 600;
@@ -52,27 +58,26 @@ nav {
                 text-align: center;
                 padding: 12%;
                 transition: all 1s ease-in-out;
-                &:hover
-                {
+
+                &:hover {
                     border-radius: 4px;
                     background-color: $primary;
                     color: $tertiary;
                 }
             }
-            
-            ul
-            {
+
+            ul {
                 visibility: hidden;
             }
-            &:hover ul
-            {
+
+            &:hover ul {
                 visibility: visible;
             }
         }
-        li:last-child
-        {
+
+        li:last-child {
             float: right;
         }
-        
+
     }
 }

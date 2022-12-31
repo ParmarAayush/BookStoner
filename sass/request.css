@@ -8,12 +8,9 @@
 }
 
 body {
-  height: cal(99.58vh);
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
   background-color: #393E46;
-  display: flex;
-  flex-direction: column;
 }
 
 header {
@@ -33,6 +30,10 @@ nav {
   height: 45px;
   width: 100%;
   background-color: #393E46;
+}
+nav .active {
+  background-color: #222831;
+  color: #00ADB5;
 }
 nav ul {
   list-style: none;
@@ -72,6 +73,7 @@ nav ul li:last-child {
 main {
   background-color: #393E46;
   overflow: hidden;
+  min-height: calc(100vh - 270px);
 }
 main .upload-box {
   background-color: #222831;
@@ -83,6 +85,10 @@ main .upload-box {
   justify-content: space-between;
 }
 main .upload-box .left {
+  height: 450px;
+  width: 450px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-right-radius: 5%;
   border-bottom-right-radius: 5%;
 }
@@ -150,12 +156,13 @@ main .upload-box .file i {
 
 footer {
   width: 100%;
-  margin-top: auto;
   background-color: #222831;
   line-height: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  bottom: 1;
 }
 footer .developer {
   color: #EEEEEE;
