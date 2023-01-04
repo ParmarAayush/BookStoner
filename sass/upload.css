@@ -96,7 +96,7 @@ main .upload-box form {
   grid-template-columns: 50% 50%;
   grid-template-rows: 10% 10% 45% 20%;
 }
-main .upload-box input[type=submit] {
+main .upload-box input[type=button] {
   height: 35px;
   width: 150px;
   outline: none;
@@ -112,7 +112,7 @@ main .upload-box input[type=submit] {
   grid-row-start: 5;
   margin-left: 60%;
 }
-main .upload-box input[type=submit]:hover {
+main .upload-box input[type=button]:hover {
   background-color: #222831;
   border: 2px solid #00ADB5;
 }
