@@ -2,32 +2,49 @@ import * as firebase from "./firebase.js"; // configure using import to utilize 
 
 // firebase import
 
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
 import { getFirestore, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
 
 // creat variable to use services 
 
 const auth = getAuth();
 const db = getFirestore();
+const user = auth.currentUser;
 
 // profile.js code start from here 
-
-let logedIn = false;
-let profile = document.getElementById("profileActive");
+let logedIn;
 
 function regSignin() {
-    // e.preventDefault();
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            logedIn = true;
+            hidden();
+            console.log("User Find UID" + user.uid);
+        } else {
+            logedIn = false;
+            hidden();
+            console.log("User Not Found");
+        }
+    });
+}
+
+function hidden() {
     console.log("hide functionality work");
     if (logedIn == true) {
+        console.log("Execute True")
         document.getElementsByClassName("register")[0].classList.add("displaynone");
         document.getElementsByClassName("signIn")[0].classList.add("displaynone");
         document.getElementsByClassName("tempOne")[0].classList.remove("displaynone")
     } else {
+        console.log("Execute False")
         document.getElementsByClassName("tempOne")[0].classList.add("displaynone");
         document.getElementsByClassName("register")[0].classList.add("displaynone");
         document.getElementsByClassName("signIn")[0].classList.remove("displaynone");
     }
 }
+
+
+
 
 document.addEventListener("DOMContentLoaded", regSignin);
 
@@ -96,7 +113,7 @@ document.getElementById("signinBtn").addEventListener("click", function () {
             alert("Log In SuccessFully");
             console.log(userCredential.user.uid);
             logedIn = userCredential.user.uid != null ? true : false;
-            regSignin();
+            hidden();
             console.log(logedIn);
             // location.replace("/BookStoner/index.html");
         })
@@ -106,5 +123,17 @@ document.getElementById("signinBtn").addEventListener("click", function () {
             console.log(errorCode);
             console.log(errorMessage);
         });
-        // [error] regSignin(e); its give error resolve it 
+    // [error] regSignin(e); its give error resolve it 
+})
+
+document.getElementById("logOuta").addEventListener("click", function () {
+    console.log("Log Out Function Is Work");
+    signOut(auth).then(() => {
+        alert("Sign-out successful.");
+        regSignin();
+        hidden();
+    }).catch((error) => {
+        console.log(error.message);
+        // An error happened.
+    });
 })
