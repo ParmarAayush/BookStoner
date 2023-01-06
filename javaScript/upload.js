@@ -16,7 +16,6 @@ let logedIn;
 document.addEventListener("DOMContentLoaded", function () {
     onAuthStateChanged(auth, (user) => {
         if (user) {
-            alert("True Work")
             logedIn = true;
             userEmail = user.email;
             console.log("User Found . Email is " + user.email);
@@ -27,18 +26,25 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 })
-document.getElementById("coverpage").addEventListener("change", function uploadImage(e) {
-    alert("Upload Function is Work");
-    try {
-        console.log(e.target.files[0]);
-        const fileName = e.target.files[0];
-        var name = fileName.name.split('.').shift() + Math.floor(Math.random() * 10);
-        var type = fileName.type.split("/")[0];
-        var path = type + '/' + name;
-        console.log(path)
-        const storageRef = ref(storage, path);
-        const uploadTask = uploadBytes(storageRef, e.target.files[0]);
-        uploadTask.on('state_changed', (snapshot) => {
+let storageRef;
+let downloadURL;
+const fileInput = document.getElementById("coverpage");
+fileInput.onchange = () => {
+    const fileName = fileInput.files[0];
+    console.log(fileInput);
+    var name = fileName.name.split('.').shift() + Math.floor(Math.random() * 10);
+    var type = fileName.type.split("/")[0];
+    var path = type + '/' + name;
+    storageRef = ref(storage, path);
+
+}
+
+document.getElementById("upload").addEventListener("click", async function () {
+
+    const uploadTask = uploadBytesResumable(storageRef, fileInput.files[0]);
+
+    uploadTask.on('state_changed',
+        (snapshot) => {
             const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
             console.log('Upload is ' + progress + '% done');
             switch (snapshot.state) {
@@ -50,23 +56,16 @@ document.getElementById("coverpage").addEventListener("change", function uploadI
                     break;
             }
         },
-            (error) => {
-            },
-            () => {
-                getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-                    console.log('File available at', downloadURL);
-                });
-            }
-        );
-    } catch (error) {
-        console.log(error)
-        alert(error);
-    }
-})
-
-document.getElementById("upload").addEventListener("click", async function () {
-
-
+        (error) => {
+        },
+        () => {
+            getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+                console.log('File available at', downloadURL);
+                console.log("Url From This Keyword " + downloadURL);
+                this.downloadURL = downloadURL;
+            });
+        }
+    );
     console.log(userEmail);
     let title = document.getElementById("title").value;
     let author = document.getElementById("author").value;
@@ -79,7 +78,7 @@ document.getElementById("upload").addEventListener("click", async function () {
     try {
         alert("Add Data in sub collection");
         let query = doc(db, path, title)
-        await setDoc(query, {
+        setDoc(query, {
             Title: title,
             Author: author,
             Price: price,
