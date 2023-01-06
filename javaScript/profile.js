@@ -3,13 +3,15 @@ import * as firebase from "./firebase.js"; // configure using import to utilize 
 // firebase import
 
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
-import { getFirestore, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
+import { getFirestore, setDoc, doc, collection, getCountFromServer } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
 
 // creat variable to use services 
 
 const auth = getAuth();
 const db = getFirestore();
 const user = auth.currentUser;
+let userEmail;
+
 
 // profile.js code start from here 
 let logedIn;
@@ -19,6 +21,8 @@ function regSignin() {
         if (user) {
             logedIn = true;
             hidden();
+            userEmail = user.email;
+            console.log("User Email Is " + userEmail)
             console.log("User Find UID" + user.uid);
         } else {
             logedIn = false;
@@ -27,6 +31,7 @@ function regSignin() {
         }
     });
 }
+
 
 function hidden() {
     console.log("hide functionality work");
@@ -58,6 +63,8 @@ document.getElementById("regLink").addEventListener("click", function () {
     document.getElementsByClassName("register")[0].classList.remove("displaynone");
 })
 
+
+
 document.getElementById("registerBtn").addEventListener("click", function () {
 
     //get from data
@@ -81,7 +88,6 @@ document.getElementById("registerBtn").addEventListener("click", function () {
 
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-            // Signed in 
             const user = userCredential.user;
             console.log(user.uid);
             alert("Registration Successfully");
@@ -123,7 +129,6 @@ document.getElementById("signinBtn").addEventListener("click", function () {
             console.log(errorCode);
             console.log(errorMessage);
         });
-    // [error] regSignin(e); its give error resolve it 
 })
 
 document.getElementById("logOuta").addEventListener("click", function () {
@@ -134,6 +139,5 @@ document.getElementById("logOuta").addEventListener("click", function () {
         hidden();
     }).catch((error) => {
         console.log(error.message);
-        // An error happened.
     });
 })
