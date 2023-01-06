@@ -63,7 +63,15 @@ document.getElementById("regLink").addEventListener("click", function () {
     document.getElementsByClassName("register")[0].classList.remove("displaynone");
 })
 
-
+setTimeout(async () => {
+    const coll = collection(db, `User/${userEmail}/Upload`);
+    const snapshot = await getCountFromServer(coll);
+    console.log('count: ', snapshot.data().count);
+    let count = snapshot.data().count;
+    let element = document.querySelector(".totalBook");
+    element.innerHTML = count;
+    console.log(element);
+}, 5000);
 
 document.getElementById("registerBtn").addEventListener("click", function () {
 
