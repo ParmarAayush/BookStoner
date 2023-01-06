@@ -2,8 +2,8 @@ import * as firebase from "./firebase.js"; // configure using import to utilize 
 
 // alert("Upload javaScript Work")
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
-import { getFirestore, collection, setDoc, doc, addDoc } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
-import { getStorage, ref, uploadBytesResumable, getDownloadURL, uploadBytes } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js";
+import { getFirestore, collection, setDoc, doc, addDoc, getCountFromServer  } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
+import { getStorage, ref, uploadBytesResumable, getDownloadURL} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-storage.js";
 
 
 const auth = getAuth();
@@ -40,6 +40,15 @@ fileInput.onchange = () => {
 }
 
 document.getElementById("upload").addEventListener("click", async function () {
+
+    setTimeout(async () => {
+        const coll = collection(db, `User/${userEmail}/Upload`);
+        const snapshot = await getCountFromServer(coll);
+        console.log('count: ', snapshot.data().count);
+        let count = snapshot.data().count;
+        count++;
+        console.log(count);
+    }, 1500);
 
     const uploadTask = uploadBytesResumable(storageRef, fileInput.files[0]);
 
